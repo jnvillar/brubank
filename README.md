@@ -3,11 +3,11 @@
 
 # Requisitos:
 
-- Mysql instalado y corriendo con el schema "brubank" creado
+- Mysql instalado y con el schema "brubank" creado
 - Grails 3.3.5
 - Java 8
 
-Para instalar grails recomiendo instalar [sdk man](https://sdkman.io/)  y luego correr las linea:
+Para instalar grails recomiendo instalar [sdk man](https://sdkman.io/)  y luego correr las líneas:
 
 ```
 sdk install java 8u161-oracle; sdk install grails 3.3.5         
@@ -16,7 +16,7 @@ sdk use java 8u161-oracle; sdk use grails 3.3.5
 
 # Run
 
-Para levantar la aplicacion simplemente hay que correr las linea
+Para levantar la aplicacion simplemente hay que correr la línea
 
 ```
 grails run-app
@@ -29,6 +29,8 @@ Para correr los test
 ```
 grails test-app
 ```
+
+Son todos test unitarios, queda para un futuro agregar test de integracion.
 
 # Endpoints
 
@@ -46,7 +48,7 @@ Las desiciones tomadas fueron las siguientes
 
 ###  Cache:
 
-1. **Se utilizo una cache que guarda los datos en una base local. La misma cuenta con un ttl modificable**
+1. **Se utilizó una cache que guarda los datos en una base local. La misma cuenta con un ttl modificable**
 
 ##### Ventajas:
  - Se puede consumir la info cacheda desde otros servicios de manera sencilla, ya que estos podrian conectarse a la base
@@ -56,19 +58,18 @@ Las desiciones tomadas fueron las siguientes
 - Es mas lento que una cache almacenada en memoria ram
 - Si hay muchas instancias y no se desea compartir la cache, hay que crear una base de datos diferente cada vez que se genere esta situacion
 
-
 2. **La cache de temperaturas promedio no se borra nunca. Tome esta desicion porque asumi improbable que la informacion sobre la temperatura cambie**
 
 ##### Ventajas:
 - Una vez que se consulta sobre cierto dia, esta info queda para siempre
 
 ##### Desventajas
-- Se puede llenar de basura (informacion que solo se consulta una vez) y crecer muy ràpido
+- Se puede llenar de basura (informacion que solo se consulta una vez) y crecer muy rápido
 
 3. **Al consultar sobre un usuario, primero se verifica que el usuario ya exista en la cache**
 
 ##### Ventajas:
-- Es mas ràpido si el usuario esta en la cache
+- Es mas rápido si el usuario esta en la cache
 
 ##### Desventajas
 - Como la cache tiene un tll, no se van a observar nuevos repos hasta que el item no se borre (luego de 4 dias para usuarios de github)
@@ -80,7 +81,7 @@ Las desiciones tomadas fueron las siguientes
 
 ##### A futuro
 
-- Agregar un limite de tamaño maximo
+- Agregar un limite de tamaño maximo para la cache
 - Guardar cantidad de hits
 - Ir borrando los elementos menos hiteados de la cache con algun job
 - Poder pedir que no se use un dato cacheado al momento de hacer el request (mandando un header, o parametros por url)
@@ -107,8 +108,12 @@ Las desiciones tomadas fueron las siguientes
 
 ##### Ventajas:
 - Es sencillo y escalable
-- Si se desea cambiar la forma de generar request, solo hay que cambiar la clase apiClient
+- Si se desea cambiar la forma de generar los requests, solo hay que cambiar la clase apiClient
+
+##### A futuro
 - Paralelizar los llamados a la api de clima, en vez de obtener de una fecha, se podrian lanzar multiples tasks que realicen los mismos
+
+
 
 
 
