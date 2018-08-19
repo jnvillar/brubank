@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="brubank.UserSpec" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-08-19T03:40:06" hostname="ARAR017385" time="0.018">
-  <properties/>
-  <testcase name="user creation" classname="brubank.UserSpec" time="0.013"/>
-  <testcase name="user name and location can't be null" classname="brubank.UserSpec" time="0.005"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
