@@ -1,5 +1,5 @@
 # brubank
-[Brubank Challenge](https://brubank.herokuapp.com/)
+[https://brubank.herokuapp.com/](https://brubank.herokuapp.com/)
 
 # Requisitos:
 
@@ -44,8 +44,6 @@ Son todos test unitarios, queda para un futuro agregar test de integracion.
 
 # Decisicones
 
-Las desiciones tomadas fueron las siguientes
-
 ###  Cache:
 
 1. **Se utilizó una cache que guarda los datos en una base local. La misma cuenta con un ttl modificable**
@@ -54,7 +52,7 @@ Las desiciones tomadas fueron las siguientes
  - Se puede consumir la info cacheda desde otros servicios de manera sencilla, ya que estos podrian conectarse a la base
  - Si hay multiples instancias, pueden compartir la cache
 
-##### Desventajas
+##### Desventajas:
 - Es mas lento que una cache almacenada en memoria ram
 - Si hay muchas instancias y no se desea compartir la cache, hay que crear una base de datos diferente cada vez que se genere esta situacion
 
@@ -63,7 +61,7 @@ Las desiciones tomadas fueron las siguientes
 ##### Ventajas:
 - Una vez que se consulta sobre cierto dia, esta info queda para siempre
 
-##### Desventajas
+##### Desventajas:
 - Se puede llenar de basura (informacion que solo se consulta una vez) y crecer muy rápido
 
 3. **Al consultar sobre un usuario, primero se verifica que el usuario ya exista en la cache**
@@ -71,7 +69,7 @@ Las desiciones tomadas fueron las siguientes
 ##### Ventajas:
 - Es mas rápido si el usuario esta en la cache
 
-##### Desventajas
+##### Desventajas:
 - Como la cache tiene un tll, no se van a observar nuevos repos hasta que el item no se borre (luego de 4 dias para usuarios de github)
 
 4. **La cache implementa una interfaz**
@@ -79,7 +77,7 @@ Las desiciones tomadas fueron las siguientes
 ##### Ventajas:
 - En un futuro, si se desea cambiar la cache por otra, va a ser mas sensillo
 
-##### A futuro
+##### A futuro:
 
 - Agregar un limite de tamaño maximo para la cache
 - Guardar cantidad de hits
@@ -94,10 +92,10 @@ Las desiciones tomadas fueron las siguientes
 ##### Ventajas:
 - Es sencillo y escalable
 
-##### Desventajas
+##### Desventajas:
 - Al solo haber un tipo de excepcion, se limita el control que se puede tener sobre las mismas
 
-##### A futuro
+##### A futuro:
 
 - Crear mas tipos de excepciones para errores especificos
 - En vez de fallar, se podria tener valores for defecto. Por ej, si un usuario de github no tiene ubicacion, usar la ubicacion desde la cual esta haciendo el request en caso de ser posible.
@@ -110,7 +108,7 @@ Las desiciones tomadas fueron las siguientes
 - Es sencillo y escalable
 - Si se desea cambiar la forma de generar los requests, solo hay que cambiar la clase apiClient
 
-##### A futuro
+##### A futuro:
 - Paralelizar los llamados a la api de clima, en vez de obtener de una fecha, se podrian lanzar multiples tasks que realicen los mismos
 
 
