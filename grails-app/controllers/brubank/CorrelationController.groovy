@@ -9,7 +9,7 @@ class CorrelationController {
 
     def index() {
         render(([msg: "Brubank Challenge", urls: [
-                "https://brubank.herokuapp.com/cache/correlation/jnvillar",
+                "https://brubank.herokuapp.com/correlation/jnvillar",
                 "https://brubank.herokuapp.com/cache/user",
                 "https://brubank.herokuapp.com/cache/user/flush",
                 "https://brubank.herokuapp.com/cache/averageTemperature",
