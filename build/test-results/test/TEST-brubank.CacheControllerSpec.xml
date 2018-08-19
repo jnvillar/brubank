@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="brubank.CacheControllerSpec" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-08-19T03:40:06" hostname="ARAR017385" time="0.184">
+  <properties/>
+  <testcase name="info" classname="brubank.CacheControllerSpec" time="0.115"/>
+  <testcase name="flush" classname="brubank.CacheControllerSpec" time="0.069"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

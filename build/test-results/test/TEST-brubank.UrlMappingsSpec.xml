@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="brubank.UrlMappingsSpec" tests="1" skipped="0" failures="1" errors="0" timestamp="2018-08-13T01:52:43" hostname="ARAR017385" time="0.09">
+  <properties/>
+  <testcase name="test forward mappings" classname="brubank.UrlMappingsSpec" time="0.09">
+    <failure message="Expected no exception to be thrown, but got 'junit.framework.AssertionFailedError'" type="org.spockframework.runtime.UnallowedExceptionThrownError">Expected no exception to be thrown, but got 'junit.framework.AssertionFailedError'
+	at spock.lang.Specification.noExceptionThrown(Specification.java:119)
+	at brubank.UrlMappingsSpec.test forward mappings(UrlMappingsSpec.groovy:14)
+Caused by: junit.framework.AssertionFailedError: Url mapping assertion failed, 'user' is not a valid controller
+	at grails.testing.web.UrlMappingsUnitTest$Trait$Helper.checkController(UrlMappingsUnitTest.groovy:98)
+	at grails.testing.web.UrlMappingsUnitTest$Trait$Helper.checkForwardUrlMapping(UrlMappingsUnitTest.groovy:236)
+	at grails.testing.web.UrlMappingsUnitTest$Trait$Helper.assertForwardUrlMapping(UrlMappingsUnitTest.groovy:336)
+	at grails.testing.web.UrlMappingsUnitTest$Trait$Helper.assertUrlMapping(UrlMappingsUnitTest.groovy:200)
+	at brubank.UrlMappingsSpec.test forward mappings(UrlMappingsSpec.groovy:11)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

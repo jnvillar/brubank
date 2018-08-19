@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="brubank.TemperaturesCacheSpec" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-08-19T03:40:07" hostname="ARAR017385" time="0.021">
+  <properties/>
+  <testcase name="returns AverageTemperature if it's not older than 4 days" classname="brubank.TemperaturesCacheSpec" time="0.019"/>
+  <testcase name="returns null if AverageTemperature it's not in the cache" classname="brubank.TemperaturesCacheSpec" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

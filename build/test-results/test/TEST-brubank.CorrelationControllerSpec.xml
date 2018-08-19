@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="brubank.CorrelationControllerSpec" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-08-19T03:40:02" hostname="ARAR017385" time="0.821">
+  <properties/>
+  <testcase name="user repositories" classname="brubank.CorrelationControllerSpec" time="0.728"/>
+  <testcase name="user repositories raises BadResponse exception" classname="brubank.CorrelationControllerSpec" time="0.057"/>
+  <testcase name="user repositories raises exception" classname="brubank.CorrelationControllerSpec" time="0.012"/>
+  <testcase name="get weather raises BadResponse exception" classname="brubank.CorrelationControllerSpec" time="0.012"/>
+  <testcase name="get weather raises exception" classname="brubank.CorrelationControllerSpec" time="0.012"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

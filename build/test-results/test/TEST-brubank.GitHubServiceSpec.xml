@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="brubank.GitHubServiceSpec" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-08-19T03:40:07" hostname="ARAR017385" time="0.033">
+  <properties/>
+  <testcase name="looks first in cache" classname="brubank.GitHubServiceSpec" time="0.007"/>
+  <testcase name="if data is not in cache it uses the client" classname="brubank.GitHubServiceSpec" time="0.026"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
